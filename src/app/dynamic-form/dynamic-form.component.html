@@ -1,0 +1,7 @@
+<form [formGroup]="dynamicForm" (ngSubmit)="onSubmit()">
+    <div *ngFor="let field of formConfig">
+        <label [for]="field.name">{{ field.label }}</label>
+
+        </div>
+
+</form>

@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/scss/bootstrap";
+html, body {
+  height: auto;
+  width: 100%; /* Ensure body takes full width */
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container-fluid {
+  padding: 0 15px; /* Adjust as needed to fit within viewport */
+}
+
+.row {
+  margin-right: 0; /* Remove default row margins */
+  margin-left: 0;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

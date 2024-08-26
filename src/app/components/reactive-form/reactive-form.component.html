@@ -1,0 +1,18 @@
+<form [formGroup]="myform" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="username">Username</label>
+    <input id="username" type="text" formControlName="userName" />
+    <div *ngIf="myform.get('userName')?.hasError('containsAngular')">
+      Username must not contain "Angular".
+    </div>
+  </div>
+
+
+  <div>
+    <label for="email">Email</label>
+    <input id="email" formControlName="email" type="text">
+    <div *ngIf="myform.get('email')?.hasError('email')"> Please enter a valid email address.</div>
+  </div>
+
+  <button type="submit">Submit</button>
+</form>

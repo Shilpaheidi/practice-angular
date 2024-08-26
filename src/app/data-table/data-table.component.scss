@@ -1,0 +1,22 @@
+/* Apply border to the table */
+.table {
+    border-collapse: collapse; /* Ensures borders are not doubled */
+    width: 100%; /* Optional: Makes the table width 100% of its container */
+  }
+  
+  /* Apply border to table cells */
+  .table th, .table td {
+    border: 1px solid #dee2e6; /* Light gray border color */
+    padding: 8px; /* Optional: Adds some padding inside cells */
+  }
+  
+  /* Optional: Add border to the table container */
+//   .m-3 {
+//     border: 1px solid #dee2e6; /* Same border color as cells */
+//     padding: 10px; /* Optional: Adds padding around the table */
+//     border-radius: 4px; /* Optional: Adds rounded corners to the border */
+//   }
+  
+.table th{
+    background-color: bisque;
+}

@@ -1,0 +1,40 @@
+<div class="container">
+    <h2>Search and Sort Items</h2>
+  
+    <!-- Search Input -->
+    <input 
+      type="text" 
+      placeholder="Search by name" 
+      (keyup.enter)="onSearch(searchInput.value)" 
+      #searchInput
+    />
+    <button (click)="onSearch(searchInput.value)">Search</button>
+    <button (click)="resetList()">Reset</button>
+  
+    <!-- Sort Buttons -->
+    <div class="sort-buttons">
+      <button (click)="sortItemsByName(true)">Sort by Name Asc</button>
+      <button (click)="sortItemsByName(false)">Sort by Name Desc</button>
+      <button (click)="sortItemsByPrice(true)">Sort by Price Asc</button>
+      <button (click)="sortItemsByPrice(false)">Sort by Price Desc</button>
+    </div>
+  
+    <!-- Items Table -->
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of sortedItems">
+          <td>{{ item.id }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.price | currency }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

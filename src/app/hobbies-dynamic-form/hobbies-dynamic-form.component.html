@@ -1,0 +1,41 @@
+<div>
+  <form action="" [formGroup]="hobbiesForm">
+    <div>
+      <label for="firstName">First Name:</label>
+      <input id="firstName" formControlName="firstName" />
+      <div
+        *ngIf="
+          hobbiesForm.get('firstName')?.invalid &&
+          hobbiesForm.get('firstName')?.touched
+        "
+      >
+        First Name is required.
+      </div>
+    </div>
+
+    <div formArrayName="hobbies">
+      <label>Hobbies:</label>
+
+      <button (click)="addHobby()">Add Hobbies</button>
+
+      <div *ngFor="let hobby of hobbies.controls; let i = index;">
+        <input type="text" [formControlName]="i" placeholder="Enter hobby" />
+        <button (click)="removeHobby(i)">Remove</button>
+        <div *ngIf="hobby.invalid && hobby.touched">
+            Hobby is required.
+          </div>
+      </div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+
+  <div *ngIf="hobbiesForm.valid && hobbiesForm.touched">
+    <h3>Submitted Data:</h3>
+    <p>First Name: {{ hobbiesForm.value.firstName }}</p>
+    <p>Hobbies:</p>
+    <ul>
+      <li *ngFor="let hobby of hobbiesForm.value.hobbies">{{ hobby }}</li>
+    </ul>
+  </div>
+
+</div>

@@ -24,6 +24,11 @@ import { MaterialDataTableComponent } from './material-data-table/material-data-
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { HobbiesDynamicFormComponent } from './hobbies-dynamic-form/hobbies-dynamic-form.component';
+import { SearchFilterPaginationComponent } from './search-filter-pagination/search-filter-pagination.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
+import { WeatherComponent } from './weather/weather.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +42,12 @@ import { LoginComponent } from './login/login.component';
     SearchSortListComponent,
     NewDynamicFormComponent,
     MaterialDataTableComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    HobbiesDynamicFormComponent,
+    SearchFilterPaginationComponent,
+    TodoListComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,

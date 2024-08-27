@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>Weather App</h1>
+    <form (ngSubmit)="onSearch()">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter City</mat-label>
+        <input matInput [(ngModel)]="city" name="city" required>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Search</button>
+    </form>
+  </div>
+  

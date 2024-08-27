@@ -1,0 +1,25 @@
+
+
+
+<div>
+    <input
+      type="text"
+      placeholder="Search by name"
+      [(ngModel)]="searchTerm"
+      (ngModelChange)="filterItems(searchTerm)"
+    />
+  
+    <ul>
+        <li *ngFor="let item of filteredItems">
+          {{ item.id }} - {{ item.product }} - {{ item.user }}
+        </li>
+      </ul>
+
+
+      <div class="pagination-controls">
+        <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+        <span>Page {{ currentPage }} of {{ totalPages }}</span>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+      </div>
+  </div>
+  

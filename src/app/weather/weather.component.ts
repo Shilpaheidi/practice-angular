@@ -27,6 +27,8 @@ export class WeatherComponent implements OnInit {
     if (this.city) {
       this.weatherService.getWeather(this.city).subscribe(
         data => this.weatherData = data,
+   
+        
         error => console.error('Error fetching weather data', error)
       );
     }

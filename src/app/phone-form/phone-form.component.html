@@ -1,0 +1,13 @@
+<form [formGroup]="phoneForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="phoneNumber">Phone Number:</label>
+      <input id="phoneNumber" formControlName="phoneNumber" placeholder="Enter your phone number">
+      <div *ngIf="phoneForm.get('phoneNumber')?.invalid && phoneForm.get('phoneNumber')?.touched">
+        <small *ngIf="phoneForm.get('phoneNumber')?.hasError('phoneNumber')">
+          Invalid phone number format. Please use formats like (123) 456-7890 or 123-456-7890.
+        </small>
+      </div>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  

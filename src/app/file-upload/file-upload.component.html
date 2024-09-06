@@ -1,0 +1,14 @@
+<div>
+    <input type="file" (change)="onFileSelected($event)" />
+    <button (click)="uploadFile()">Upload</button>
+  
+    <div *ngIf="uploadProgress > 0">
+      <p>Upload Progress: {{ uploadProgress }}%</p>
+      <div class="progress-bar">
+        <div [ngStyle]="{ 'width': uploadProgress + '%' }"></div>
+      </div>
+    </div>
+  
+    <p *ngIf="uploadMessage">{{ uploadMessage }}</p>
+  </div>
+  

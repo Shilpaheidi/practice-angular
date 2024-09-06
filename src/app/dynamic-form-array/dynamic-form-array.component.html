@@ -1,0 +1,87 @@
+<div>
+  <form [formGroup]="detailsForm"  (ngSubmit)="submitDetailsForm()">
+    <div>
+      <label for="">First Name</label>
+      <input
+        type="text"
+        formControlName="firstName"
+        placeholder="please enter  firstName"
+      />
+
+     <span *ngIf="detailsForm.get('firstName')?.invalid &&  detailsForm.get('firstName')?.touched">Please enter first name</span>
+    </div>
+
+    <div>
+      <label for="">Email</label>
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="please enter  email"
+      />
+     <span *ngIf="detailsForm.get('email')?.invalid &&  detailsForm.get('email')?.touched">Please enter first name</span>
+
+    </div>
+
+    <div>
+      <label for="">Course</label>
+      <input
+        type="text"
+        formControlName="course"
+        placeholder="please enter  course"
+      />
+     <span *ngIf="detailsForm.get('course')?.invalid &&  detailsForm.get('course')?.touched">Please enter first name</span>
+
+    </div>
+
+    <div>
+      <label for="">Experience</label>
+      <input
+        type="text"
+        formControlName="experience"
+        placeholder="please enter  experience"
+      />
+     <span *ngIf="detailsForm.get('experience')?.invalid &&  detailsForm.get('experience')?.touched">Please enter first name</span>
+
+    </div>
+
+    <div>
+      <ng-container formArrayName="personalDetails"  *ngFor="let details of personalDetailValues.controls;let i=index">
+        <div [formGroupName]="i">
+          <div>
+            <label for="">Father Name</label>
+            <input
+              type="text"
+              formControlName="fatherName"
+              placeholder="please enter  fatherName"
+            />
+            <span *ngIf="details.get('fatherName')?.invalid &&  details.get('fatherName')?.touched">Please enter Father Name</span>
+
+          </div>
+          <div>
+            <label for="">Mother Name</label>
+            <input
+              type="text"
+              formControlName="motherName"
+              placeholder="please enter  motherName"
+            />
+            <span *ngIf="details.get('motherName')?.invalid &&  details.get('motherName')?.touched">Please enter Mother Name</span>
+          
+          </div>
+
+          <div>
+            <label for="">Address</label>
+            <input
+              type="text"
+              formControlName="address"
+              placeholder="please enter  address"
+            />
+            <span *ngIf="details.get('address')?.invalid &&  details.get('address')?.touched">Please enter Address</span>
+
+          </div>
+        </div>
+      </ng-container>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>

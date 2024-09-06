@@ -1,0 +1,17 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" type="text" />
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email" />
+    </div>
+    <div>
+      <label for="profilePicture">Profile Picture:</label>
+      <input id="profilePicture" formControlName="profilePicture" type="file" (change)="onFileChange($event)" />
+      <img *ngIf="profileImage" [src]="profileImage" alt="Profile Picture" width="100" />
+    </div>
+    <button type="submit">Save</button>
+  </form>
+  

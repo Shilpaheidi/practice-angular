@@ -1,0 +1,8 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="scrollable-container">
+  <div *ngFor="let key of formKeys" #formField>
+    <input [formControlName]="key" />
+    <div *ngIf="form.get(key)?.invalid">{{ key }} is required</div>
+  </div>
+
+</form>
+<button type="submit">Submit</button>

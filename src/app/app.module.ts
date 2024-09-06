@@ -29,6 +29,22 @@ import { HobbiesDynamicFormComponent } from './hobbies-dynamic-form/hobbies-dyna
 import { SearchFilterPaginationComponent } from './search-filter-pagination/search-filter-pagination.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { WeatherComponent } from './weather/weather.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { TableComponent } from './table/table.component';
+import { DataTablePaginationComponent } from './data-table-pagination/data-table-pagination.component';
+import { DynamicFormArrayComponent } from './dynamic-form-array/dynamic-form-array.component';
+import { UserTableComponent } from './user-table/user-table.component';
+import { UserProfileFormComponent } from './user-profile-form/user-profile-form.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
+import { MyFormComponent } from './my-form/my-form.component';
+import { PhoneFormComponent } from './phone-form/phone-form.component';
+import { MatchingPasswordComponent } from './matching-password/matching-password.component';
+import { EnoteMatchingPasswordComponent } from './enote-matching-password/enote-matching-password.component';
+import { TitleCasePipe } from './title-case.pipe';
+import { FeatureModule } from './feature/feature.module';
+import { FeatureRoutingModule } from './feature/feature-routing.module';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +63,21 @@ import { WeatherComponent } from './weather/weather.component';
     HobbiesDynamicFormComponent,
     SearchFilterPaginationComponent,
     TodoListComponent,
-    WeatherComponent
+    WeatherComponent,
+    UserProfileComponent,
+    TableComponent,
+    DataTablePaginationComponent,
+    DynamicFormArrayComponent,
+    UserTableComponent,
+    UserProfileFormComponent,
+    FileUploadComponent,
+    MyFormComponent,
+    PhoneFormComponent,
+    MatchingPasswordComponent,
+    EnoteMatchingPasswordComponent,
+    TitleCasePipe,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +92,8 @@ import { WeatherComponent } from './weather/weather.component';
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,FeatureModule,
+    FeatureRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

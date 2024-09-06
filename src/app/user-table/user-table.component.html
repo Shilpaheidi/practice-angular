@@ -1,0 +1,40 @@
+<div>
+    <input type="text" placeholder="Search..." [(ngModel)]="searchQuery" (input)="filter()" />
+  
+    <table>
+      <thead>
+        <tr>
+          <th (click)="sort('name')">Name</th>
+          <th (click)="sort('email')">Email</th>
+          <th (click)="sort('role')">Role</th>
+          <th (click)="sort('status')">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of filteredUsers">
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.role }}</td>
+          <td>{{ user.status }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div>
+      <label for="pageSize">Items per page:</label>
+      <select id="pageSize" (change)="changePageSize($event)">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+      </select>
+    </div>
+<!--   
+    <div>
+      <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+      <span>Page {{ currentPage }} of {{ Math.ceil(filteredUsers.length / pageSize) }}</span>
+      <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === Math.ceil(filteredUsers.length / pageSize)">Next</button>
+    </div>
+  </div> -->
+
+  <button (click)="exportToCSV()">Export to CSV</button>
+  

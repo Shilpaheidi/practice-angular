@@ -1,0 +1,33 @@
+<div class="m-3">
+
+
+
+    <input type="text"  [(ngModel)]="filter" (ngModelChange)="filterData(filter)" placeholder="Search me">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">
+         Id
+          </th>
+          <th scope="col">
+        Name
+          </th>
+          <th scope="col">
+         Email
+          </th>
+          <th scope="col">
+          Role
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let d of filteredData">
+          <td>{{d.id}}</td>
+          <td>{{d.name}}</td>
+          <td>{{d.email }}</td>
+          <td>{{d.role}}</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div> 

@@ -1,0 +1,12 @@
+.scrollable-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical scrolling */
+    white-space: nowrap; /* Prevent wrapping of fields */
+  }
+  
+  .scrollable-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap; /* Prevents wrapping of input fields */
+  }

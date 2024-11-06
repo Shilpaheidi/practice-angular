@@ -54,6 +54,17 @@ export class DynamicFormArrayComponent implements OnInit {
       localStorage.setItem('savedFormData', JSON.stringify(formData));
       console.log('Form Data:', formData);
     }
+
+    // if (this.detailsForm.invalid) {
+    //   this.detailsForm.markAllAsTouched();
+    //   return;
+    // } else {
+    //   // Clear validation errors and mark fields as untouched if the form is valid
+    // this.detailsForm.markAsUntouched()
+    //   Object.keys(this.detailsForm.controls).forEach((key) => {
+    //     this.detailsForm.get(key)?.setErrors(null); // Clear errors for each control
+    //   });
+    // }
   }
 
   clearForm() {
